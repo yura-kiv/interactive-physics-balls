@@ -62,6 +62,8 @@ export class PhysicWorld {
     let forceWay = -0.3;
     window.addEventListener("mousedown", () => (forceWay = 0.15));
     window.addEventListener("mouseup", () => (forceWay = -0.3));
+    window.addEventListener("touchstart", () => (forceWay = 0.15));
+    window.addEventListener("touchend", () => (forceWay = -0.3));
 
     viewer.addToAnimationQueue("animate-world", () => {
       world.step();
